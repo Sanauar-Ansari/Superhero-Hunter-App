@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Hunter App</title>
+    <link rel="stylesheet" href="hero.css" />
+  </head>
+  <!-- class=showCard in body to toggle -->
+  <body class="">
+    <div class="container">
+      <h1>Superhero Hunter App</h1>
+      <div id="form">
+        <input
+          type="text"
+          placeholder="Search your superhero's"
+          id="input"
+          autofocus
+        />
+        <button id="btn" type="submit">Search</button>
+        <button id="btn" type="submit" class="favHeroPage">
+          See your favourite hero's
+        </button>
+      </div>
+      <!-- Search result will be show in this below div -->
+      <div class="search-result"></div>
+    </div>
+    <!-- favourite list will be show in this below div -->
+    <div class="favourite-hores">
+      <h1>Favorite Hero's List</h1>
+      <div class="favList"></div>
+      <!-- Close button used to close the favourite list -->
+      <button class="closeBtn">CLOSE FAVOURITE LIST</button>
+    </div>
+
+    <script src="hero.js"></script>
+  </body>
+</html>

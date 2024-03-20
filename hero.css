@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* background-color: rgb(250, 168, 181); */
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  transition: 0.5s; /* transform*/
+}
+
+.container h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 20px;
+}
+
+#input {
+  width: 250px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background-color: rgb(156, 243, 243);
+}
+
+#btn {
+  border: none;
+  outline: none;
+  padding: 7px;
+  border-radius: 10px;
+  color: bisque;
+  background-color: rgb(173, 86, 254);
+  transition: 0.24s ease-in-out;
+}
+#btn:hover {
+  background-color: rgb(241, 110, 110);
+  transition: 0.24s ease-in-out;
+}
+
+.search-result {
+  /* width: 80%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px; */
+  /* position: relative; */
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* For "FETCHING DATA..." */
+.search-result h1 {
+  color: black;
+  font-size: 55px;
+  margin-left: 400px;
+  margin-top: 80px;
+  display: block;
+  position: absolute;
+}
+/* For "Your hero not present in this marvel api" */
+.search-result h2 {
+  color: red;
+  font-size: 55px;
+  margin-top: 70px;
+  display: block;
+  position: absolute;
+}
+
+.card {
+  width: 85%;
+  background-color: rgb(219, 242, 242);
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.25s ease-in-out;
+  box-shadow: 2px 3px 2.5px #353432;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.25s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.btns {
+  margin: 10px;
+}
+
+.description h4 {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: left;
+  padding: 5px;
+}
+
+.description h3 {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+  padding: 3px;
+}
+
+.description h5 {
+  font-size: 15px;
+  color: rgba(11, 210, 11, 0.67);
+  text-align: left;
+  padding: 5px;
+}
+
+/* for description hovering effect */
+.description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  padding: 10px;
+  max-height: 100%;
+  max-width: 100%;
+  transform: translateY(101%);
+  transition: 0.25s ease-in-out;
+  /* to add scroll bar */
+  overflow: auto;
+}
+.card:hover .description {
+  transform: translateY(0%);
+  transition: 0.25s ease-in-out;
+}
+
+/* Add to fav button */
+#addToFavBtn {
+  background-color: #353432;
+  color: #eee;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.23s ease-in-out;
+}
+#addToFavBtn:hover {
+  background-color: grey;
+  color: black;
+  transition: 0.23s ease-in-out;
+}
+
+/* Favourite list css */
+.favourite-hores {
+  width: 350px;
+  background-color: #353432;
+  color: white;
+  position: fixed;
+  /* top: 0;
+  bottom: 0;
+  right: 0; */
+  inset: 0 -400px 0 auto;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: 0.5s;
+  padding: 10px;
+  overflow: auto;
+}
+
+body.showCard .favourite-hores {
+  inset: 0 0 0 auto;
+}
+/*  moving to the left to the container class when cart came into the display */
+/* body.showCard.cartTab    ye full likhna hi padega becoz showCard p depend h   */
+body.showCard .container {
+  transform: translateX(-150px);
+}
+.favourite-hores h1 {
+  text-align: center;
+  font-weight: 200;
+}
+
+.favCard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.favList .favCard:nth-child(odd) {
+  background-color: #eee1;
+}
+
+.favList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.left img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 3px;
+  padding-right: 10px;
+}
+
+.name-heading h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.name-heading p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 7px;
+  color: rgb(26, 181, 243);
+}
+.comics-series {
+  font-size: 10px;
+  font-weight: 200;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: rgb(3, 53, 3);
+}
+
+.right h4 {
+  text-align: start;
+  font-size: 30px;
+}
